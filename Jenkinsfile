@@ -7,7 +7,7 @@ pipeline {
         sh 'mvn clean install'
       }
     }
-    stage('') {
+    stage('write') {
       steps {
         writeFile(file: 'dockerfile', text: 'FROM aaa \\n COPY a /a', encoding: 'utf -8')
       }
